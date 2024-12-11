@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Exceptions {
   public static void validateAge(int age) throws CustomCheckedExceptions 
-  {
+  { 
     if(age<18)
   {
     throw new CustomCheckedExceptions ("Cannot drive");
