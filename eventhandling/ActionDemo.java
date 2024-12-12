@@ -1,15 +1,25 @@
 package eventhandling;
-
-import java.awt.FlowLayout;
+import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
-public class ActionDemo extends JFrame implements ActionListener {
+public class ActionDemo extends JFrame {
   ActionDemo() {
     JButton jButton=new JButton("click me");
     JButton jButton2=new JButton("Don't click me");
-    jButton.addActionListener(this);
-    jButton2.addActionListener(this);
+    jButton.addActionListener((ActionEvent e) -> {
+        System.out.println("Clicked");
+    });
+    jButton2.addActionListener(
+      new ActionListener(){
+      @Override
+      public void actionPerformed(ActionEvent e)
+      {
+        System.out.println("Not Clicked");
+        
+      }
+    }
+    );
     setLayout(new FlowLayout());
     add(jButton);
     add(jButton2);
@@ -18,11 +28,6 @@ public class ActionDemo extends JFrame implements ActionListener {
     setSize(500,500);
     setDefaultCloseOperation(2);
   }
-@Override
-public void actionPerformed(ActionEvent e)
-{
-  System.out.println("Button clicked!");
-}
   public static void main(String[] args) {
     new ActionDemo();
   }
