@@ -13,14 +13,17 @@ public class Cookies extends HttpServlet {
         Cookie cookie = new Cookie("name", "nischal");
         res.addCookie(cookie);
         // Read cookies.
-        Cookie[] cookies=req.getCookies();
-        if(cookies!null)
+        Cookie[] cookies = req.getCookies();
+        if (cookies {
+            !null
+            
+        
+        })
         {
-          for(Cookie cookie:cookies)
-          {
-           string cookie2= cookie.getValue();
+          for (Cookie cookie : cookies) {
+                String cookie2 = cookie.getValue();
 
-          }
+            }
         }
         //delete cookies.
         cookie.setMaxAge(0);
