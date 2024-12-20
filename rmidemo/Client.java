@@ -11,6 +11,7 @@ public class Client {
             int value = obj.multiply(6, 5);
             System.out.println(value);
         } catch (Exception e) {
+            System.out.println(e.getMessage());
         }
 
     }
