@@ -2,17 +2,22 @@ package udp;
 
 import java.io.*;
 import java.net.*;
+import java.util.*;
 
 public class ClientFactorial {
+
     public static void main(String[] args) throws IOException {
         // Create DatagramSocket object
         DatagramSocket ds = new DatagramSocket();
 
         // Take input number from the user
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        // BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        // String input = reader.readLine();
+        // byte[] bytes = input.getBytes();
         System.out.print("Enter a number to calculate factorial: ");
-        String input = reader.readLine();
-        byte[] bytes = input.getBytes();
+        Scanner sc = new Scanner(System.in);
+        String num = sc.nextLine();
+        byte[] bytes = num.getBytes();
 
         // Server address and port
         InetAddress address = InetAddress.getByName("localhost");
