@@ -11,11 +11,12 @@ public class ByteStream {
         try {
             FileInputStream fis = new FileInputStream("./file/ball.txt");
             FileOutputStream fos = new FileOutputStream("./file/mmall.txt");
-            String hello = "hi";
-            fos.write(hello.getBytes());
+            // String hello = "hi";
+            // fos.write(hello.getBytes());
             int i = 0;
             while ((i = fis.read()) != -1) {
                 System.out.print((char) (i));
+                fos.write(i);
             }
             fis.close();
         } catch (FileNotFoundException e) {

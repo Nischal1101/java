@@ -16,8 +16,7 @@ public class Addition extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 int num1 = Integer.parseInt(jTextField.getText());
-                int num2 = Integer.parseInt(jTextField2.getText()
-                );
+                int num2 = (Integer.valueOf) (jTextField2.getText());
                 int result = num1 + num2;
                 jLabel.setText("The result is " + result);
                 jTextField3.setText(String.valueOf(result));

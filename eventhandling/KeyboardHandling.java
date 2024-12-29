@@ -1,8 +1,9 @@
+package eventhandling;
 
-import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 import java.sql.*;
+import javax.swing.*;
 
 public class KeyboardHandling {
 
@@ -29,7 +30,8 @@ public class KeyboardHandling {
         frame.add(cancelButton);
 
         frame.setSize(300, 150);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(3);
+
         frame.setVisible(true);
 
         okButton.addActionListener(e -> login());
@@ -93,6 +95,6 @@ public class KeyboardHandling {
     }
 
     public static void main(String[] args) {
-        new Practice1();
+        new KeyboardHandling();
     }
 }

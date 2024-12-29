@@ -8,7 +8,7 @@ public class Server {
         try {
             CalcRemote obj = new CalcRemote();
             Registry rgstry = LocateRegistry.createRegistry(9000);
-            rgstry.bind("multiply", obj);
+            rgstry.rebind("multiply", obj);
             System.out.println("Server ready");
         } catch (Exception e) {
             System.out.println(e);
